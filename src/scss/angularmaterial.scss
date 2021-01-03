@@ -1,0 +1,18 @@
+.cdk-global-overlay-wrapper,
+.cdk-overlay-container {
+  z-index: 99999 !important;
+}
+
+.mat-card-actions {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  padding: 0px 0 !important;
+}
+
+mat-form-field.mat-form-field {
+  // font-size: 16px;
+}
+
+.mat-form-field {
+  width: 100% !important;
+}

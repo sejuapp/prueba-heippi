@@ -1,0 +1,73 @@
+body {
+  background: #5a49a0;
+}
+
+
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+}
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: -230px;
+  z-index: -10;
+  width: 1920px;
+}
+
+.separadorInput {
+  padding-top: 10px !important;
+}
+
+
+.componentEnModalSinBordes {
+  margin-top: -16px;
+  margin-bottom: -16px;
+}
+
+
+.centrarVerticalPadre {
+  display: flex;
+  align-items: center;
+}
+
+
+.portadaContactos {
+  background: url(https://blog.krowdy.com/hubfs/Campa%C3%B1a%201%20-%20Noviembre%202019/Blogpost/Im%C3%A1genes/red-de-contactos-seleccion-de-personal.webp);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+
+}
+
+.portadaCumpleanios {
+  background: url(https://image.freepik.com/vector-gratis/fondo-feliz-cumpleanos-dibujado-mano_23-2148594698.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+
+}
+
+.text {
+  color: rgb(255, 255, 255);
+  margin: 30px 0px 30px 0px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+}

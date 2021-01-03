@@ -1,0 +1,74 @@
+<div class="col-sm-12 animate__animated animate__fadeInDown">
+  <mat-card>
+    <mat-card-title>lista de contactos</mat-card-title>
+    <mat-card-subtitle>Cree, edite o elimine sus contactos</mat-card-subtitle>
+
+    <mat-card-content class="animate__animated animate__fadeInDown">
+      <br>
+
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: left;">
+          <button mat-raised-button  routerLink="/">
+            <mat-icon>arrow_back</mat-icon> Volver
+          </button>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 button-container">
+          <button mat-raised-button color="primary" (click)="openModal(template, null)">
+            <mat-icon>add</mat-icon> Nuevo contacto
+          </button>
+        </div>
+      </div>
+
+
+      <br>
+
+      <mat-card *ngFor="let item of lstContactos" style="margin-bottom: 10px;">
+        <div class="row">
+          <div class="col-sm-2 centrarVerticalPadre">
+            <button mat-icon-button>
+              <mat-icon>contacts</mat-icon>
+            </button>
+          </div>
+
+          <div class="col-sm-8 dataContacto">
+            {{item.nombre_completo}}<br>
+            {{item.celular}}<br>
+            {{item.fecha_nacimiento |date:"dd-MM-yyyy" }}<br>
+          </div>
+          <div class="col-sm-2">
+            <button mat-mini-fab color="accent" matTooltip="Editar contacto" [matTooltipPosition]="'above'"
+              (click)="openModal(template, item)">
+              <!-- <mat-icon>edit</mat-icon> -->
+              <i class="material-icons md-36">edit</i>
+            </button>
+            &nbsp;
+            <button mat-mini-fab color="warn" matTooltip="Eliminar contacto" [matTooltipPosition]="'above'"
+              (click)="eliminarContacto(item)">
+              <!-- <mat-icon>edit</mat-icon> -->
+              <i class="material-icons md-36">delete</i>
+            </button>
+          </div>
+        </div>
+      </mat-card>
+
+
+    </mat-card-content>
+
+  </mat-card>
+</div>
+
+
+<ng-template #template>
+  <div class="modal-header">
+    <!-- <h4 class="modal-title pull-left">Modal</h4> -->
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body componentEnModalSinBordes">
+    <div class="row">
+      <app-crear-editar-contacto [item]="itemSeleccionado" (emiter)="emiterCrearEditar($event)">
+      </app-crear-editar-contacto>
+    </div>
+  </div>
+</ng-template>

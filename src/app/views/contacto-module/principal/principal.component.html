@@ -1,0 +1,49 @@
+<div class="col-sm-12 animate__animated animate__fadeInDown">
+  <mat-card>
+    <mat-card-title>Juancho contactos</mat-card-title>
+    <mat-card-content>
+      <br>
+      <div class="row animate__animated animate__fadeInDown">
+
+        <div class="col-sm-6 separadorInput">
+          <div class="portadaContactos">
+            <br><br><br>
+            <div class="text">
+              <h1>{{lstContactos.length}}</h1>
+              <h3>Total de contactos</h3>
+            </div>
+            <br><br><br>
+          </div>
+        </div>
+
+        <div class="col-sm-6 separadorInput">
+          <div class="portadaCumpleanios">
+            <br><br><br>
+            <div class="text">
+              <h1>{{totalHoy}}</h1>
+              <h3>happy birthday today</h3>
+            </div>
+            <br><br><br>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="col-sm-12" style="text-align: center;">
+          <button mat-raised-button color="primary" routerLink="/lista-contactos">
+            <mat-icon>contacts</mat-icon> &nbsp; Mis contactos
+          </button>
+
+        </div>
+
+      </div>
+
+
+
+
+    </mat-card-content>
+
+  </mat-card>
+</div>

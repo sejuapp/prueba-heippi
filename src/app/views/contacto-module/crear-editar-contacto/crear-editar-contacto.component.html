@@ -1,0 +1,73 @@
+<mat-card class="animate__animated animate__fadeInDown">
+  <form [formGroup]='contactoForm' #formContacto="ngForm" (ngSubmit)="confirmarGuardado()" autocomplete="off"
+    novalidate>
+
+
+    <mat-card-title>{{item == null ? 'Nuevo contacto':'Editar contacto'}}</mat-card-title>
+    <mat-card-subtitle>{{item == null ? 'Agregue un nuevo contacto a su lista':'Ingrese los nuevos datos del contacto'}}
+    </mat-card-subtitle>
+
+    <mat-card-content>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 separadorInput">
+          <mat-form-field appearance="legacy">
+            <mat-label>Número de Identificación</mat-label>
+            <input matInput formControlName="num_identificacion" required>
+            <mat-error *ngIf="f.num_identificacion.errors">Requerido</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 separadorInput">
+          <mat-form-field appearance="legacy">
+            <mat-label>Nombre Completo</mat-label>
+            <input matInput formControlName="nombre_completo" required>
+            <mat-error *ngIf="f.nombre_completo.errors">Requerido</mat-error>
+          </mat-form-field>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 separadorInput">
+          <mat-form-field appearance="legacy">
+            <mat-label>Celular</mat-label>
+            <input matInput formControlName="celular" required>
+            <mat-error *ngIf="f.celular.errors">Requerido</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 separadorInput">
+          <mat-form-field appearance="legacy">
+            <mat-label>Dirección</mat-label>
+            <input matInput formControlName="direccion" required>
+            <mat-error *ngIf="f.direccion.errors">Requerido</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 separadorInput">
+
+          <mat-form-field appearance="legacy">
+            <mat-label>Fecha nacimiento</mat-label>
+            <input matInput [matDatepicker]="pickerfi" placeholder="dd/mm/aaaa" required autocomplete="off"
+              formControlName="fecha_nacimiento">
+            <mat-datepicker touchUi="false" #pickerfi disabled="false"></mat-datepicker>
+            <mat-datepicker-toggle matSuffix [for]="pickerfi"></mat-datepicker-toggle>
+            <mat-error *ngIf="f.fecha_nacimiento.errors">Requerido</mat-error>
+          </mat-form-field>
+
+        </div>
+
+      </div>
+
+    </mat-card-content>
+
+    <mat-card-actions>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 separadorInput">
+          <button mat-raised-button color="primary" type="submit">Guardar</button>
+
+          <button mat-raised-button color="warn" type="button" (click)="cancelar()">Cancelar</button>
+        </div>
+      </div>
+    </mat-card-actions>
+  </form>
+</mat-card>
