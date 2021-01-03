@@ -13,8 +13,8 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 separadorInput">
           <mat-form-field appearance="legacy">
             <mat-label>Número de Identificación</mat-label>
-            <input matInput formControlName="num_identificacion" required>
-            <mat-error *ngIf="f.num_identificacion.errors">Requerido</mat-error>
+            <input matInput formControlName="num_identificacion" required pattern="^[0-9]+">
+            <mat-error *ngIf="f.num_identificacion.errors">Solo números sin puntos, comas o espacios en blanco</mat-error>
           </mat-form-field>
         </div>
 
@@ -30,8 +30,8 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 separadorInput">
           <mat-form-field appearance="legacy">
             <mat-label>Celular</mat-label>
-            <input matInput formControlName="celular" required>
-            <mat-error *ngIf="f.celular.errors">Requerido</mat-error>
+            <input matInput formControlName="celular" required required pattern="^[0-9]+">
+            <mat-error *ngIf="f.celular.errors">Solo números sin puntos, comas o espacios en blanco</mat-error>
           </mat-form-field>
         </div>
 
