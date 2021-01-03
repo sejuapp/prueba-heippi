@@ -71,3 +71,16 @@ svg#clouds {
   background: rgba(0, 0, 0, 0.5);
   display: inline-block;
 }
+
+
+.btnTablaContacto {
+  width: auto !important;
+}
+
+
+
+@media (max-width: 575.98px) {
+  .btnTablaContacto {
+    width: 100% !important;
+  }
+}
